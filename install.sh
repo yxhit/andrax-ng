@@ -30,7 +30,7 @@ ccrypt -d -K "#TryHarder?HowifYOUareEASY#" "$tarball"
 mv "${tarball%.cpt}" "$tarball" 
 # 解压 Rootfs 
 echo "Decompressing Rootfs, please be patient ...sabaaaar bos .ngopi aja dulu" 
-tar -xvf "$tarball" 
+proot --link2symlink tar -xvf "$tarball" --exclude='dev' 
 # 返回到原始目录 
 cd "$cur" 
 # 创建启动脚本 
