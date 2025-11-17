@@ -12,6 +12,8 @@ if [ -d "$folder" ]; then
 echo "跳过新建目录，检查安装文件是否存在。" 
 else 
 mkdir -p "$folder" 
+mkdir -p tmp
+chmod 1777 tmp
 fi 
 tarball="ANDRAX-NG-Portable-v1002.tar.xz.cpt"
 if [ -f "$tarball" ]; then
