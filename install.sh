@@ -24,7 +24,7 @@ cur=$(pwd)
 mv "$tarball" "$folder"
 # 进入目标文件夹 
 cd "$folder" # 使用 ccrypt 解密文件 
-echo "正在解密安装文件，请稍等...预计五分钟左右。" 
+echo "正在解密安装文件，请稍等...预计五分钟左右。请保持屏幕常亮。" 
 ccrypt -d -K "#TryHarder?HowifYOUareEASY#" "$tarball" 
 # 解密后， 将文件重命名为 tarball 中引用的名称 
 mv "${tarball%.cpt}" "$tarball" 
