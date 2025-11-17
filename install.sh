@@ -41,10 +41,12 @@ echo '''#!/bin/bash
 unset LD_PRELOAD 
 command="proot" 
 command+=" --link2symlink" 
+command+=" --kill-on-exit"
 command+=" -S ./andrax" 
 command+=" -b /sys" 
 command+=" -b /dev" 
 command+=" -b /proc" 
+command+=" -b $HOME/tmp:/tmp"
 command+=" -w /home/andrax" 
 command+=" /usr/bin/env -i" 
 command+=" HOME=/root" 
